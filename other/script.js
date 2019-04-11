@@ -45,7 +45,7 @@ function compChoice(){
 function win(){
     userScore++;
     userScore_span.innerHTML = userScore;
-    result_p.innerHTML = " picked " + compPick + ". You win!";
+    result_p.innerHTML = " Computer picked " + compPick + ". You win!";
 }
 
 function lost(){

@@ -1,0 +1,49 @@
+var userScore = 0;
+var computerScore = 0;
+var randomNum = Math.floor(Math.random() * 3) + 1;
+var compPick;
+alert("What are you going to do?");
+var userPick = prompt("Rock, Paper or Scissors?");
+
+function upperLetter(string){
+return string.charAt(0).toUpperCase() + string.slice(1);
+} 
+userPick = upperLetter(userPick);
+
+
+switch (randomNum){
+    case 1:
+        compPick = "Rock";
+        break;
+    case 2:
+        compPick = "Paper";
+        break;
+    case 3:
+        compPick = "Scissors";
+        break;
+}
+
+function compare(choice1, choice2){
+    if (choice1 == choice2){
+        return "It's a draw!";
+    } else if (choice1 == "Rock"){
+        if (choice2 == "Scissors"){
+            return "You win!"}
+        else {
+            return "You lose!"}
+
+    }else if (choice1 == "Scissors"){
+        if (choice2 == "Paper"){
+            return "You win!"}
+        else {return "You lose!"}
+
+    }else if (choice1 == "Paper"){
+        if (choice2 == "Rock"){
+            return "You win!"}
+        else {return "You lose!"}
+    }
+}
+
+
+
+alert(compare(userPick,compPick));
